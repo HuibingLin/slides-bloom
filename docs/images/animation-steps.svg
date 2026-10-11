@@ -1,63 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="430" viewBox="0 0 1120 430" role="img" aria-labelledby="title desc">
-  <title id="title">One animated PPTX slide becomes four cumulative PDF pages</title>
-  <desc id="desc">Four slide cards show the starting state, then items one, two and three appearing in click order while earlier items remain visible.</desc>
-  <rect width="1120" height="430" rx="24" fill="#f3f5f1"/>
-  <rect x="24" y="24" width="1072" height="382" rx="20" fill="#101d35"/>
-  <text x="54" y="66" fill="#c5ee73" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">PPTX × 1</text>
-  <path d="M185 60h70m-12-10 12 10-12 10" fill="none" stroke="#91a4b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="279" y="66" fill="#ffffff" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">PDF × 4</text>
-  <g font-family="Arial, sans-serif">
-    <g transform="translate(54 92)">
-      <rect width="232" height="270" rx="13" fill="#ffffff"/>
-      <text x="18" y="31" fill="#6e9b3e" font-size="12" font-weight="700" letter-spacing="1">PDF 01</text>
-      <rect x="18" y="52" width="152" height="16" rx="8" fill="#14223a"/>
-      <rect x="18" y="80" width="54" height="4" rx="2" fill="#b9df7b"/>
-      <path d="M18 114h194M18 157h194M18 200h194" stroke="#e4e9e7" stroke-width="1" stroke-dasharray="4 5"/>
-      <rect x="18" y="232" width="42" height="23" rx="11" fill="#e9eef0"/>
-      <text x="39" y="248" text-anchor="middle" fill="#66778a" font-size="12" font-weight="700">0</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="440" viewBox="0 0 1120 440" role="img" aria-labelledby="title desc">
+  <title id="title">One PPTX slide becomes four cumulative PDF pages</title>
+  <desc id="desc">A flower pot starts empty. Each click adds one colorful flower to the next PDF page, while flowers from earlier clicks remain visible.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff0ff"/>
+      <stop offset="1" stop-color="#f7fbff"/>
+    </linearGradient>
+    <g id="page-shell" font-family="Arial, sans-serif">
+      <rect x="2" y="5" width="230" height="292" rx="18" fill="#d8e6e1"/>
+      <rect width="234" height="292" rx="18" fill="#ffffff" stroke="#d7e4df" stroke-width="1.5"/>
+      <rect x="16" y="57" width="202" height="174" rx="13" fill="url(#sky)"/>
+      <circle cx="187" cy="91" r="17" fill="#ffe4a0"/>
+      <path d="M34 100c0-7 6-12 13-12 4-8 17-9 23-1 8-2 15 4 15 11 0 5-4 8-9 8H43c-5 0-9-2-9-6z" fill="#ffffff" opacity="0.84"/>
+      <path d="M16 191c33-20 68-16 99-3 37-20 69-12 103 7v36H16z" fill="#d9eac7"/>
+      <ellipse cx="117" cy="199" rx="89" ry="13" fill="#e2a06c"/>
+      <path d="M30 198h174l-13 35H43z" fill="#c87654"/>
+      <path d="M43 233h148" stroke="#ae5e43" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="117" cy="198" rx="78" ry="8" fill="#795747"/>
+      <circle cx="65" cy="197" r="3" fill="#a98665"/>
+      <circle cx="117" cy="197" r="3" fill="#a98665"/>
+      <circle cx="169" cy="197" r="3" fill="#a98665"/>
+      <path d="M16 248h202" stroke="#e8eeeb"/>
     </g>
-    <g transform="translate(314 92)">
-      <rect width="232" height="270" rx="13" fill="#ffffff"/>
-      <text x="18" y="31" fill="#6e9b3e" font-size="12" font-weight="700" letter-spacing="1">PDF 02</text>
-      <rect x="18" y="52" width="152" height="16" rx="8" fill="#14223a"/>
-      <rect x="18" y="80" width="54" height="4" rx="2" fill="#b9df7b"/>
-      <circle cx="29" cy="113" r="11" fill="#e5f3cf"/><text x="29" y="117" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">1</text>
-      <rect x="48" y="108" width="146" height="10" rx="5" fill="#203550"/>
-      <path d="M18 157h194M18 200h194" stroke="#e4e9e7" stroke-width="1" stroke-dasharray="4 5"/>
-      <rect x="18" y="232" width="42" height="23" rx="11" fill="#e5f3cf"/>
-      <text x="39" y="248" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">+1</text>
+<g id="flower-coral">
+<path d="M0 0V-48" fill="none" stroke="#408f69" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="-10" cy="-24" rx="11" ry="5" transform="rotate(27 -10 -24)" fill="#59b67a"/>
+<ellipse cx="10" cy="-35" rx="11" ry="5" transform="rotate(-27 10 -35)" fill="#59b67a"/>
+<circle cx="-13" cy="-56" r="11" fill="#ff8676"/>
+<circle cx="-8" cy="-70" r="11" fill="#ff8676"/>
+<circle cx="8" cy="-70" r="11" fill="#ff8676"/>
+<circle cx="13" cy="-56" r="11" fill="#ff8676"/>
+<circle cx="0" cy="-45" r="11" fill="#ff8676"/>
+<circle cy="-53" r="8" fill="#ffd76f"/>
+</g>
+<g id="flower-gold">
+<path d="M0 0V-48" fill="none" stroke="#408f69" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="-10" cy="-24" rx="11" ry="5" transform="rotate(27 -10 -24)" fill="#59b67a"/>
+<ellipse cx="10" cy="-35" rx="11" ry="5" transform="rotate(-27 10 -35)" fill="#59b67a"/>
+<circle cx="-13" cy="-56" r="11" fill="#ffcb5e"/>
+<circle cx="-8" cy="-70" r="11" fill="#ffcb5e"/>
+<circle cx="8" cy="-70" r="11" fill="#ffcb5e"/>
+<circle cx="13" cy="-56" r="11" fill="#ffcb5e"/>
+<circle cx="0" cy="-45" r="11" fill="#ffcb5e"/>
+<circle cy="-53" r="8" fill="#9c6543"/>
+</g>
+<g id="flower-violet">
+<path d="M0 0V-48" fill="none" stroke="#408f69" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="-10" cy="-24" rx="11" ry="5" transform="rotate(27 -10 -24)" fill="#59b67a"/>
+<ellipse cx="10" cy="-35" rx="11" ry="5" transform="rotate(-27 10 -35)" fill="#59b67a"/>
+<circle cx="-13" cy="-56" r="11" fill="#b7a0f4"/>
+<circle cx="-8" cy="-70" r="11" fill="#b7a0f4"/>
+<circle cx="8" cy="-70" r="11" fill="#b7a0f4"/>
+<circle cx="13" cy="-56" r="11" fill="#b7a0f4"/>
+<circle cx="0" cy="-45" r="11" fill="#b7a0f4"/>
+<circle cy="-53" r="8" fill="#ffe486"/>
+</g>
+    <g id="sparkle" fill="none" stroke="#f6a64c" stroke-width="2.5" stroke-linecap="round">
+      <path d="M0-8V8M-8 0H8"/>
     </g>
-    <g transform="translate(574 92)">
-      <rect width="232" height="270" rx="13" fill="#ffffff"/>
-      <text x="18" y="31" fill="#6e9b3e" font-size="12" font-weight="700" letter-spacing="1">PDF 03</text>
-      <rect x="18" y="52" width="152" height="16" rx="8" fill="#14223a"/>
-      <rect x="18" y="80" width="54" height="4" rx="2" fill="#b9df7b"/>
-      <circle cx="29" cy="113" r="11" fill="#e5f3cf"/><text x="29" y="117" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">1</text>
-      <rect x="48" y="108" width="146" height="10" rx="5" fill="#203550"/>
-      <circle cx="29" cy="156" r="11" fill="#e5f3cf"/><text x="29" y="160" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">2</text>
-      <rect x="48" y="151" width="124" height="10" rx="5" fill="#203550"/>
-      <path d="M18 200h194" stroke="#e4e9e7" stroke-width="1" stroke-dasharray="4 5"/>
-      <rect x="18" y="232" width="42" height="23" rx="11" fill="#e5f3cf"/>
-      <text x="39" y="248" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">+2</text>
+    <g id="bloom-halo">
+      <circle cy="-53" r="31" fill="#ffffff" opacity="0.52"/>
+      <path d="M0-91v-5M-38-53h-5M38-53h5M-27-80l-4-4M27-80l4-4M-27-26l-4 4M27-26l4 4" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
     </g>
-    <g transform="translate(834 92)">
-      <rect width="232" height="270" rx="13" fill="#ffffff"/>
-      <text x="18" y="31" fill="#6e9b3e" font-size="12" font-weight="700" letter-spacing="1">PDF 04</text>
-      <rect x="18" y="52" width="152" height="16" rx="8" fill="#14223a"/>
-      <rect x="18" y="80" width="54" height="4" rx="2" fill="#b9df7b"/>
-      <circle cx="29" cy="113" r="11" fill="#e5f3cf"/><text x="29" y="117" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">1</text>
-      <rect x="48" y="108" width="146" height="10" rx="5" fill="#203550"/>
-      <circle cx="29" cy="156" r="11" fill="#e5f3cf"/><text x="29" y="160" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">2</text>
-      <rect x="48" y="151" width="124" height="10" rx="5" fill="#203550"/>
-      <circle cx="29" cy="199" r="11" fill="#e5f3cf"/><text x="29" y="203" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">3</text>
-      <rect x="48" y="194" width="158" height="10" rx="5" fill="#203550"/>
-      <rect x="18" y="232" width="42" height="23" rx="11" fill="#e5f3cf"/>
-      <text x="39" y="248" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">+3</text>
+    <g id="next-arrow">
+      <circle r="18" fill="#20354d"/>
+      <path d="M-6 0H6m-4-5 5 5-5 5" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
+  </defs>
+  <rect width="1120" height="440" rx="24" fill="#f0f6f2"/>
+  <circle cx="1085" cy="4" r="145" fill="#e3f2ff"/>
+  <circle cx="34" cy="450" r="125" fill="#e6f2d6"/>
+  <g font-family="Arial, sans-serif" font-weight="700">
+    <rect x="32" y="30" width="43" height="48" rx="9" fill="#e9915f"/>
+    <path d="M61 30v13h14" fill="#ffd7b7"/>
+    <text x="53" y="62" text-anchor="middle" fill="#ffffff" font-size="22">P</text>
+    <text x="88" y="61" fill="#172942" font-size="19">PPTX × 1</text>
+    <path d="M216 53h58m-10-9 10 9-10 9" fill="none" stroke="#66839a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="290" y="30" width="43" height="48" rx="9" fill="#ed746b"/>
+    <path d="M319 30v13h14" fill="#ffc8c3"/>
+    <text x="311" y="61" text-anchor="middle" fill="#ffffff" font-size="16">PDF</text>
+    <text x="346" y="61" fill="#172942" font-size="19">× 4</text>
+    <text x="1086" y="61" text-anchor="end" fill="#507167" font-size="14" letter-spacing="0.5">0 → 1 → 2 → 3</text>
   </g>
-  <g fill="none" stroke="#c5ee73" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <path d="m294 225 8 8-8 8"/>
-    <path d="m554 225 8 8-8 8"/>
-    <path d="m814 225 8 8-8 8"/>
+
+  <g transform="translate(32 103)" font-family="Arial, sans-serif">
+    <use href="#page-shell"/>
+    <rect x="16" y="17" width="72" height="27" rx="13.5" fill="#edf2f3"/>
+    <text x="52" y="35" text-anchor="middle" fill="#536b75" font-size="13" font-weight="700">PDF 01</text>
+    <text x="16" y="273" fill="#43586a" font-size="15" font-weight="700">START</text>
+    <rect x="164" y="254" width="54" height="26" rx="13" fill="#edf2f3"/>
+    <text x="191" y="272" text-anchor="middle" fill="#536b75" font-size="13" font-weight="700">0 / 3</text>
   </g>
+
+  <g transform="translate(306 103)" font-family="Arial, sans-serif">
+    <use href="#page-shell"/>
+    <use href="#bloom-halo" x="65" y="198"/>
+    <use href="#flower-coral" x="65" y="198"/>
+    <use href="#sparkle" x="104" y="123"/>
+    <rect x="16" y="17" width="72" height="27" rx="13.5" fill="#fff0ea"/>
+    <text x="52" y="35" text-anchor="middle" fill="#a55042" font-size="13" font-weight="700">PDF 02</text>
+    <text x="16" y="273" fill="#43586a" font-size="15" font-weight="700">CLICK 1</text>
+    <rect x="164" y="254" width="54" height="26" rx="13" fill="#fff0ea"/>
+    <text x="191" y="272" text-anchor="middle" fill="#a55042" font-size="13" font-weight="700">1 / 3</text>
+  </g>
+
+  <g transform="translate(580 103)" font-family="Arial, sans-serif">
+    <use href="#page-shell"/>
+    <use href="#bloom-halo" x="117" y="198"/>
+    <use href="#flower-coral" x="65" y="198"/><use href="#flower-gold" x="117" y="198"/>
+    <use href="#sparkle" x="155" y="118"/>
+    <rect x="16" y="17" width="72" height="27" rx="13.5" fill="#fff4d9"/>
+    <text x="52" y="35" text-anchor="middle" fill="#86612d" font-size="13" font-weight="700">PDF 03</text>
+    <text x="16" y="273" fill="#43586a" font-size="15" font-weight="700">CLICK 2</text>
+    <rect x="164" y="254" width="54" height="26" rx="13" fill="#fff4d9"/>
+    <text x="191" y="272" text-anchor="middle" fill="#86612d" font-size="13" font-weight="700">2 / 3</text>
+  </g>
+
+  <g transform="translate(854 103)" font-family="Arial, sans-serif">
+    <use href="#page-shell"/>
+    <use href="#bloom-halo" x="169" y="198"/>
+    <use href="#flower-coral" x="65" y="198"/><use href="#flower-gold" x="117" y="198"/><use href="#flower-violet" x="169" y="198"/>
+    <use href="#sparkle" x="205" y="121"/>
+    <rect x="16" y="17" width="72" height="27" rx="13.5" fill="#f0ebff"/>
+    <text x="52" y="35" text-anchor="middle" fill="#6c59a5" font-size="13" font-weight="700">PDF 04</text>
+    <text x="16" y="273" fill="#43586a" font-size="15" font-weight="700">CLICK 3</text>
+    <rect x="164" y="254" width="54" height="26" rx="13" fill="#f0ebff"/>
+    <text x="191" y="272" text-anchor="middle" fill="#6c59a5" font-size="13" font-weight="700">3 / 3</text>
+  </g>
+  <use href="#next-arrow" x="286" y="249"/>
+  <use href="#next-arrow" x="560" y="249"/>
+  <use href="#next-arrow" x="834" y="249"/>
 </svg>
