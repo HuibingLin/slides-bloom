@@ -1,0 +1,83 @@
+name: slides-bloom
+
+x-backend-env: &backend-env
+  DATA_DIR: /data
+  REDIS_URL: redis://redis:6379/0
+  CORS_ORIGINS: http://localhost:3000,http://localhost:8080
+
+services:
+  nginx:
+    image: nginx:1.27-alpine
+    ports:
+      - "127.0.0.1:${PORT:-8080}:80"
+    volumes:
+      - ./infra/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - frontend
+      - api
+    networks:
+      - public
+      - private
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    networks:
+      - public
+    restart: unless-stopped
+
+  api:
+    build: ./backend
+    environment:
+      <<: *backend-env
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+    volumes: &backend-volumes
+      - ${DATA_PATH:-./data}:/data
+    depends_on:
+      - redis
+    networks:
+      - private
+    restart: unless-stopped
+
+  worker:
+    build: ./backend
+    command: ["sh", "-c", "fc-cache -f >/dev/null && celery -A app.worker.queue worker --loglevel=info --concurrency=${WORKER_CONCURRENCY:-1} --prefetch-multiplier=1 --max-tasks-per-child=10"]
+    environment: *backend-env
+    volumes:
+      - ${DATA_PATH:-./data}:/data
+      - ./fonts-licensed:/usr/local/share/fonts/licensed:ro
+    depends_on:
+      - redis
+    networks:
+      - private
+    mem_limit: 6g
+    cpus: 2.0
+    restart: unless-stopped
+
+  beat:
+    build: ./backend
+    command: ["celery", "-A", "app.worker.queue", "beat", "--loglevel=info"]
+    environment: *backend-env
+    volumes: *backend-volumes
+    depends_on:
+      - redis
+    networks:
+      - private
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "256mb", "--maxmemory-policy", "noeviction"]
+    volumes:
+      - redis-data:/data
+    networks:
+      - private
+    restart: unless-stopped
+
+volumes:
+  redis-data:
+
+networks:
+  public:
+  private:
+    internal: true

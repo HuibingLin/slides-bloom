@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="430" viewBox="0 0 1120 430" role="img" aria-labelledby="title desc">
+  <title id="title">One animated PPTX slide becomes four cumulative PDF pages</title>
+  <desc id="desc">Four slide cards show the starting state, then items one, two and three appearing in click order while earlier items remain visible.</desc>
+  <rect width="1120" height="430" rx="24" fill="#f3f5f1"/>
+  <rect x="24" y="24" width="1072" height="382" rx="20" fill="#101d35"/>
+  <text x="54" y="66" fill="#c5ee73" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">PPTX × 1</text>
+  <path d="M185 60h70m-12-10 12 10-12 10" fill="none" stroke="#91a4b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="279" y="66" fill="#ffffff" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">PDF × 4</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(54 92)">
+      <rect width="232" height="270" rx="13" fill="#ffffff"/>
+      <text x="18" y="31" fill="#6e9b3e" font-size="12" font-weight="700" letter-spacing="1">PDF 01</text>
+      <rect x="18" y="52" width="152" height="16" rx="8" fill="#14223a"/>
+      <rect x="18" y="80" width="54" height="4" rx="2" fill="#b9df7b"/>
+      <path d="M18 114h194M18 157h194M18 200h194" stroke="#e4e9e7" stroke-width="1" stroke-dasharray="4 5"/>
+      <rect x="18" y="232" width="42" height="23" rx="11" fill="#e9eef0"/>
+      <text x="39" y="248" text-anchor="middle" fill="#66778a" font-size="12" font-weight="700">0</text>
+    </g>
+    <g transform="translate(314 92)">
+      <rect width="232" height="270" rx="13" fill="#ffffff"/>
+      <text x="18" y="31" fill="#6e9b3e" font-size="12" font-weight="700" letter-spacing="1">PDF 02</text>
+      <rect x="18" y="52" width="152" height="16" rx="8" fill="#14223a"/>
+      <rect x="18" y="80" width="54" height="4" rx="2" fill="#b9df7b"/>
+      <circle cx="29" cy="113" r="11" fill="#e5f3cf"/><text x="29" y="117" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">1</text>
+      <rect x="48" y="108" width="146" height="10" rx="5" fill="#203550"/>
+      <path d="M18 157h194M18 200h194" stroke="#e4e9e7" stroke-width="1" stroke-dasharray="4 5"/>
+      <rect x="18" y="232" width="42" height="23" rx="11" fill="#e5f3cf"/>
+      <text x="39" y="248" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">+1</text>
+    </g>
+    <g transform="translate(574 92)">
+      <rect width="232" height="270" rx="13" fill="#ffffff"/>
+      <text x="18" y="31" fill="#6e9b3e" font-size="12" font-weight="700" letter-spacing="1">PDF 03</text>
+      <rect x="18" y="52" width="152" height="16" rx="8" fill="#14223a"/>
+      <rect x="18" y="80" width="54" height="4" rx="2" fill="#b9df7b"/>
+      <circle cx="29" cy="113" r="11" fill="#e5f3cf"/><text x="29" y="117" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">1</text>
+      <rect x="48" y="108" width="146" height="10" rx="5" fill="#203550"/>
+      <circle cx="29" cy="156" r="11" fill="#e5f3cf"/><text x="29" y="160" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">2</text>
+      <rect x="48" y="151" width="124" height="10" rx="5" fill="#203550"/>
+      <path d="M18 200h194" stroke="#e4e9e7" stroke-width="1" stroke-dasharray="4 5"/>
+      <rect x="18" y="232" width="42" height="23" rx="11" fill="#e5f3cf"/>
+      <text x="39" y="248" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">+2</text>
+    </g>
+    <g transform="translate(834 92)">
+      <rect width="232" height="270" rx="13" fill="#ffffff"/>
+      <text x="18" y="31" fill="#6e9b3e" font-size="12" font-weight="700" letter-spacing="1">PDF 04</text>
+      <rect x="18" y="52" width="152" height="16" rx="8" fill="#14223a"/>
+      <rect x="18" y="80" width="54" height="4" rx="2" fill="#b9df7b"/>
+      <circle cx="29" cy="113" r="11" fill="#e5f3cf"/><text x="29" y="117" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">1</text>
+      <rect x="48" y="108" width="146" height="10" rx="5" fill="#203550"/>
+      <circle cx="29" cy="156" r="11" fill="#e5f3cf"/><text x="29" y="160" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">2</text>
+      <rect x="48" y="151" width="124" height="10" rx="5" fill="#203550"/>
+      <circle cx="29" cy="199" r="11" fill="#e5f3cf"/><text x="29" y="203" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">3</text>
+      <rect x="48" y="194" width="158" height="10" rx="5" fill="#203550"/>
+      <rect x="18" y="232" width="42" height="23" rx="11" fill="#e5f3cf"/>
+      <text x="39" y="248" text-anchor="middle" fill="#4a7837" font-size="12" font-weight="700">+3</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#c5ee73" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m294 225 8 8-8 8"/>
+    <path d="m554 225 8 8-8 8"/>
+    <path d="m814 225 8 8-8 8"/>
+  </g>
+</svg>

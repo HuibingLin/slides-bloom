@@ -1,0 +1,14 @@
+data/
+.env
+fonts-licensed/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/*.tsbuildinfo
+frontend/*.log
+frontend/.env*.local
+frontend/next-env.d.ts
+backend/.venv/
+**/__pycache__/
+*.pyc
+.DS_Store

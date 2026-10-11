@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="270" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
+  <title id="title">Slides Bloom conversion flow</title>
+  <desc id="desc">A PPTX upload passes through FastAPI, Celery and Redis, then LibreOffice, and becomes a PDF available for preview and download.</desc>
+  <rect width="1120" height="270" rx="24" fill="#f3f5f1"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(28 34)">
+      <rect width="190" height="202" rx="18" fill="#ffffff" stroke="#dce2df" stroke-width="2"/>
+      <rect x="70" y="34" width="50" height="62" rx="7" fill="#e9f3db" stroke="#82ad4d" stroke-width="2"/>
+      <path d="M108 34v14h12" fill="none" stroke="#82ad4d" stroke-width="2"/>
+      <text x="95" y="75" fill="#4d7b38" font-size="17" font-weight="700">PPTX</text>
+      <text x="95" y="138" fill="#14223a" font-size="18" font-weight="700">Next.js</text>
+      <text x="95" y="164" fill="#657587" font-size="14">≤ 20 MiB</text>
+    </g>
+    <g transform="translate(247 34)">
+      <rect width="190" height="202" rx="18" fill="#ffffff" stroke="#dce2df" stroke-width="2"/>
+      <rect x="63" y="42" width="64" height="50" rx="11" fill="#e5ebf3"/>
+      <path d="M75 57h40M75 67h32M75 77h22" stroke="#496585" stroke-width="4" stroke-linecap="round"/>
+      <text x="95" y="138" fill="#14223a" font-size="18" font-weight="700">FastAPI</text>
+      <text x="95" y="164" fill="#657587" font-size="14">8 MiB × n</text>
+    </g>
+    <g transform="translate(466 34)">
+      <rect width="190" height="202" rx="18" fill="#ffffff" stroke="#dce2df" stroke-width="2"/>
+      <circle cx="71" cy="66" r="23" fill="#e5f3cf"/>
+      <circle cx="119" cy="66" r="23" fill="#e5f3cf"/>
+      <text x="71" y="73" fill="#4a7837" font-size="22" font-weight="700">1</text>
+      <text x="119" y="73" fill="#4a7837" font-size="22" font-weight="700">2</text>
+      <text x="95" y="138" fill="#14223a" font-size="18" font-weight="700">Celery + Redis</text>
+      <text x="95" y="164" fill="#657587" font-size="14">0 → 1 → 2 → 3</text>
+    </g>
+    <g transform="translate(685 34)">
+      <rect width="190" height="202" rx="18" fill="#ffffff" stroke="#dce2df" stroke-width="2"/>
+      <rect x="51" y="43" width="88" height="51" rx="8" fill="#e5ebf3"/>
+      <path d="M62 56h66M62 68h47M62 80h57" stroke="#496585" stroke-width="4" stroke-linecap="round"/>
+      <text x="95" y="138" fill="#14223a" font-size="18" font-weight="700">LibreOffice</text>
+      <text x="95" y="164" fill="#657587" font-size="14">Impress</text>
+    </g>
+    <g transform="translate(904 34)">
+      <rect width="190" height="202" rx="18" fill="#101d35"/>
+      <rect x="70" y="34" width="50" height="62" rx="7" fill="#ffffff"/>
+      <path d="M108 34v14h12" fill="none" stroke="#c5ee73" stroke-width="2"/>
+      <text x="95" y="75" fill="#4d7b38" font-size="17" font-weight="700">PDF</text>
+      <text x="95" y="138" fill="#ffffff" font-size="18" font-weight="700">PDF</text>
+      <path d="M72 164c11-12 35-12 46 0-11 12-35 12-46 0Z" fill="none" stroke="#b5c7d9" stroke-width="2"/>
+      <circle cx="95" cy="164" r="5" fill="#c5ee73"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#8dad5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M221 135h20m-7-7 7 7-7 7"/>
+    <path d="M440 135h20m-7-7 7 7-7 7"/>
+    <path d="M659 135h20m-7-7 7 7-7 7"/>
+    <path d="M878 135h20m-7-7 7 7-7 7"/>
+  </g>
+</svg>
