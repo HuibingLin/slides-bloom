@@ -1,4 +1,5 @@
 data/
+/tmp/
 .env
 fonts-licensed/
 frontend/node_modules/
