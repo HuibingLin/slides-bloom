@@ -7,8 +7,8 @@ export const languageNames: Record<Locale, string> = {
 };
 
 const en = {
-  title: "Slides Bloom · Every click, a new page",
-  description: "Turn each PowerPoint click animation into a cumulative PDF page.",
+  title: "PPT Animation to PDF Converter | Slides Bloom",
+  description: "Convert PowerPoint (.pptx) click animations into step-by-step PDF pages. Preview and download your PDF for free, with no account required. Files up to 20 MB.",
   language: "Language",
   topNote: "Free · Open source · No account needed",
   eyebrow: "Presentation to PDF",
@@ -60,6 +60,14 @@ const en = {
   previewFoot: "Each page keeps everything revealed by earlier clicks",
   footerName: "Open source converter",
   footerDetail: "Embedded formula artwork is preserved when available · Results depend on fonts and Office compatibility",
+  seoHeading: "Convert PowerPoint animations to PDF, step by step",
+  seoIntro: "Slides Bloom turns supported click-triggered entrance animations in a PPTX into cumulative PDF pages. The first page shows the slide before any clicks; each following page adds the content revealed by the next click.",
+  seoOrderTitle: "PDF pages in click order",
+  seoOrderBody: "A slide with three successive clicks becomes four PDF pages. Previously revealed items remain visible. If an animation cannot be reproduced in order, the converter identifies the slide.",
+  seoFormulaTitle: "Formulas and special symbols",
+  seoFormulaBody: "LibreOffice renders the slides, and embedded formula artwork is used when available. Fonts and Office compatibility can affect the result, so review the PDF preview before sharing.",
+  seoFileTitle: "Free PPTX to PDF online",
+  seoFileBody: "Upload a .pptx file up to 20 MB, preview the result page by page, and download the PDF. No account is required. Uploaded files and results are removed by scheduled cleanup after at least 24 hours.",
   fallbackWarning: "Slides {slides} use unsupported animations and were exported with all content visible.",
   fallbackWarningGeneric: "Some slides use unsupported animations and were exported with all content visible.",
   invalidFile: "Choose a .pptx presentation.",
@@ -105,8 +113,8 @@ export type MessageKey = keyof typeof en;
 type Copy = Record<MessageKey, string>;
 
 const zhTW: Copy = {
-  title: "Slides Bloom · 留下每一步",
-  description: "將 PowerPoint 點擊動畫展開成逐步累積的 PDF 頁面。",
+  title: "PPT 動畫轉 PDF 線上工具 | Slides Bloom",
+  description: "將 PowerPoint（.pptx）點擊動畫依順序轉成逐步累積的 PDF 頁面。免費預覽與下載，無須註冊，檔案上限 20 MB。",
   language: "語言",
   topNote: "免費 · 開源 · 無須註冊",
   eyebrow: "簡報轉 PDF",
@@ -158,6 +166,14 @@ const zhTW: Copy = {
   previewFoot: "每一頁都保留先前點擊已出現的內容",
   footerName: "開源轉換工具",
   footerDetail: "可用時保留原檔內嵌的公式圖像 · 結果取決於字型與 Office 相容性",
+  seoHeading: "依動畫順序將 PowerPoint 轉成 PDF",
+  seoIntro: "Slides Bloom 將 PPTX 中支援的點擊進入動畫展開成累積的 PDF 頁面。第一頁是點擊前的起始畫面，之後每頁依序加入下一次點擊顯示的內容。",
+  seoOrderTitle: "逐步保留動畫順序",
+  seoOrderBody: "一張有三次連續點擊的投影片會產生四頁 PDF，先前出現的內容會保留。若動畫無法依順序重現，轉換工具會指出投影片。",
+  seoFormulaTitle: "公式與特殊符號",
+  seoFormulaBody: "轉換使用 LibreOffice，並在可用時採用原檔內嵌的公式圖像。字型與 Office 相容性可能影響結果，分享前請先檢查 PDF 預覽。",
+  seoFileTitle: "免費線上轉換 PPTX",
+  seoFileBody: "上傳最大 20 MB 的 .pptx 檔案，逐頁預覽並下載 PDF，無須註冊。上傳檔案與轉換結果在至少 24 小時後由排程清理。",
   fallbackWarning: "第 {slides} 張投影片含有暫不支援的動畫，已將內容全顯匯出。",
   fallbackWarningGeneric: "部分投影片含有暫不支援的動畫，已將內容全顯匯出。",
   invalidFile: "請選擇 .pptx 格式的簡報。",
@@ -200,8 +216,8 @@ const zhTW: Copy = {
 };
 
 const zhCN: Copy = {
-  title: "Slides Bloom · 留下每一步",
-  description: "将 PowerPoint 点击动画展开成逐步累积的 PDF 页面。",
+  title: "PPT 动画转 PDF 在线工具 | Slides Bloom",
+  description: "将 PowerPoint（.pptx）点击动画按顺序转换为逐步累积的 PDF 页面。免费预览与下载，无需注册，文件上限 20 MB。",
   language: "语言",
   topNote: "免费 · 开源 · 无需注册",
   eyebrow: "演示文稿转 PDF",
@@ -253,6 +269,14 @@ const zhCN: Copy = {
   previewFoot: "每一页都保留先前点击已出现的内容",
   footerName: "开源转换工具",
   footerDetail: "可用时保留原文件内嵌的公式图像 · 结果取决于字体与 Office 兼容性",
+  seoHeading: "按动画顺序将 PowerPoint 转为 PDF",
+  seoIntro: "Slides Bloom 将 PPTX 中受支持的点击进入动画展开为逐步累积的 PDF 页面。第一页是点击前的起始画面，之后每页依次加入下一次点击显示的内容。",
+  seoOrderTitle: "逐步保留动画顺序",
+  seoOrderBody: "一张有三次连续点击的幻灯片会生成四页 PDF，之前出现的内容会保留。如果动画无法按顺序重现，转换工具会指出对应幻灯片。",
+  seoFormulaTitle: "公式与特殊符号",
+  seoFormulaBody: "转换使用 LibreOffice，并在可用时采用原文件内嵌的公式图像。字体与 Office 兼容性可能影响结果，分享前请检查 PDF 预览。",
+  seoFileTitle: "免费在线转换 PPTX",
+  seoFileBody: "上传最大 20 MB 的 .pptx 文件，逐页预览并下载 PDF，无需注册。上传文件和转换结果在至少 24 小时后由定时任务清理。",
   fallbackWarning: "第 {slides} 张幻灯片含有暂不支持的动画，已按内容全显导出。",
   fallbackWarningGeneric: "部分幻灯片含有暂不支持的动画，已按内容全显导出。",
   invalidFile: "请选择 .pptx 格式的演示文稿。",

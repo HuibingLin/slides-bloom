@@ -124,6 +124,14 @@ PYTHONPATH=backend backend/.venv/bin/python -m unittest discover -s backend/test
 
 目前沒有帳號系統。若要公開部署，請在入口配置 HTTPS，並依使用場景加上存取控制、流量限制及監控。檔案由排程進行一般檔案刪除；這不等同於儲存裝置層級的安全抹除。
 
+## 搜尋引擎收錄
+
+公開首頁已加入描述性標題、摘要、分享圖片與軟體應用資訊。靜態建置會提供 `/robots.txt` 和 `/sitemap.xml`，私人 `/admin/` 頁面不會被索引。
+
+若使用自己的公開網域，請在建置前於 `.env` 設定 `SITE_URL=https://your-domain.example`。這個網址會寫入前端的標準網址、網站地圖及分享資訊；修改後執行 `docker compose up --build -d frontend` 重新建置，再執行 `docker compose restart nginx`，讓閘道找到新容器。使用 `compose.oracle.yaml` 時，`SITE_DOMAIN` 應與之對應。公開部署請勿將 `SITE_URL` 設成 `localhost`。
+
+確認 HTTPS 網站可以公開存取後，將網域加入 [Google Search Console](https://search.google.com/search-console/about)。若選擇 HTML 標籤驗證，將標籤中的 `content` 值填入 `.env` 的 `GOOGLE_SITE_VERIFICATION`，重新建置前端並點擊「驗證」。接著提交 `https://your-domain.example/sitemap.xml`。網站地圖有助於搜尋引擎找到網頁，但不保證立即收錄或取得排名。
+
 ## 授權
 
 專案程式碼採用 [MIT License](LICENSE)。LibreOffice、字型及其他依賴項各自遵循其授權條款。

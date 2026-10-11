@@ -124,6 +124,14 @@ PYTHONPATH=backend backend/.venv/bin/python -m unittest discover -s backend/test
 
 目前没有账号系统。公开部署前，请在入口配置 HTTPS，并根据使用场景增加访问控制、流量限制和监控。定时删除文件属于普通文件删除，不等同于存储设备级别的安全擦除。
 
+## 搜索引擎收录
+
+公开首页已加入描述性标题、摘要、分享图片和软件应用信息。静态构建会提供 `/robots.txt` 与 `/sitemap.xml`，私人 `/admin/` 页面不会被索引。
+
+如果使用自己的公网域名，请在构建前于 `.env` 设置 `SITE_URL=https://your-domain.example`。该网址会写入前端的规范网址、站点地图和分享信息；修改后运行 `docker compose up --build -d frontend` 重新构建，再运行 `docker compose restart nginx`，使网关找到新容器。使用 `compose.oracle.yaml` 时，`SITE_DOMAIN` 应与之对应。公网部署不要将 `SITE_URL` 设为 `localhost`。
+
+确认 HTTPS 网站可以公开访问后，将域名加入 [Google Search Console](https://search.google.com/search-console/about)。如选择 HTML 标签验证，将标签里的 `content` 值填入 `.env` 的 `GOOGLE_SITE_VERIFICATION`，重新构建前端并点击“验证”。然后提交 `https://your-domain.example/sitemap.xml`。站点地图可以帮助发现网页，但不能保证立即收录或获得排名。
+
 ## 许可证
 
 项目代码采用 [MIT License](LICENSE)。LibreOffice、字体和其他依赖项分别遵循各自的授权条款。

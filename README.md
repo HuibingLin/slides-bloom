@@ -124,6 +124,14 @@ Tests cover the 20 MiB limit, cumulative animation pages, formula-image masking,
 
 There are no user accounts. Before exposing the service publicly, provide HTTPS and add access control, rate limits, and monitoring appropriate to your deployment. The scheduled file removal is ordinary deletion, not storage-level secure erasure.
 
+## Search visibility
+
+The public homepage includes a descriptive title, summary, social sharing image, and software application data. The static build also serves `/robots.txt` and `/sitemap.xml`; the private `/admin/` page is excluded from indexing.
+
+For a custom public domain, set `SITE_URL=https://your-domain.example` in `.env` before building. This value is baked into the frontend's canonical URL, sitemap, and social metadata. After changing it, run `docker compose up --build -d frontend` and then `docker compose restart nginx` so the proxy discovers the rebuilt container. Keep `SITE_DOMAIN` set to the same host when using `compose.oracle.yaml`. Do not set `SITE_URL` to `localhost` for a public deployment.
+
+Once the HTTPS site is reachable without a login, add the domain to [Google Search Console](https://search.google.com/search-console/about). For HTML-tag verification, put the tag's `content` value in `GOOGLE_SITE_VERIFICATION` in `.env`, rebuild the frontend, and click Verify. Then submit `https://your-domain.example/sitemap.xml`. Search engines decide when and whether to index a page; a sitemap does not guarantee a ranking or immediate appearance.
+
 ## License
 
 Project code is released under the [MIT License](LICENSE). LibreOffice, fonts, and other dependencies have their own licenses.
