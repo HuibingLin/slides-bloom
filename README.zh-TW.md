@@ -4,7 +4,9 @@
 
 ## 直接線上使用
 
-開啟 **[Slides Bloom 線上版](https://slidesbloom.duckdns.org/)**，即可在瀏覽器上傳 PowerPoint（`.pptx`）、將點擊動畫轉換為逐頁 PDF、預覽並下載結果。網站免費使用，無須安裝軟體或註冊帳號。
+**網站網址：** [https://slidesbloom.duckdns.org/](https://slidesbloom.duckdns.org/)
+
+開啟這個連結，即可在瀏覽器上傳 PowerPoint（`.pptx`）、將點擊動畫轉換為逐頁 PDF、預覽並下載結果。網站免費使用，無須安裝軟體或註冊帳號。
 
 **將 PPTX 的點擊動畫展開為可逐頁閱讀的 PDF。** Slides Bloom 是免費、開源、可自行部署的工具。上傳簡報後，它會依原始動畫順序產生每次點擊後的累積畫面，讓講義或分享用 PDF 保留講述節奏。
 
