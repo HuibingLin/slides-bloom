@@ -4,9 +4,11 @@
 
 ## Use Slides Bloom online
 
-**Website:** [https://slidesbloom.duckdns.org/](https://slidesbloom.duckdns.org/)
+**Website address:** `https://slidesbloom.duckdns.org/`
 
-Open this link in your browser to upload a PowerPoint (`.pptx`), convert its click animations into PDF pages, preview the result, and download the PDF. The public site is free to use and requires no installation or account.
+[Open Slides Bloom online](https://slidesbloom.duckdns.org/)
+
+Enter the address above in your browser or use the link to upload a PowerPoint (`.pptx`), convert its click animations into PDF pages, preview the result, and download the PDF. The public site is free to use and requires no installation or account.
 
 **Turn PowerPoint click animations into PDF pages you can read one step at a time.** Slides Bloom is a free, open-source tool you can run on your own server. It expands supported entrance animations in their original click order, keeping previously revealed content on each new PDF page.
 

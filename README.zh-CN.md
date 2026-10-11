@@ -4,9 +4,11 @@
 
 ## 直接在线使用
 
-**网站地址：** [https://slidesbloom.duckdns.org/](https://slidesbloom.duckdns.org/)
+**网站地址：** `https://slidesbloom.duckdns.org/`
 
-打开这个链接，即可在浏览器上传 PowerPoint（`.pptx`）、将点击动画转换为逐页 PDF、预览并下载结果。网站免费使用，无需安装软件或注册账号。
+[打开 Slides Bloom 在线版](https://slidesbloom.duckdns.org/)
+
+在浏览器输入上方地址，或点击链接，即可上传 PowerPoint（`.pptx`）、将点击动画转换为逐页 PDF、预览并下载结果。网站免费使用，无需安装软件或注册账号。
 
 **将 PPTX 的点击动画展开为可以逐页阅读的 PDF。** Slides Bloom 是免费、开源、可自行部署的工具。上传演示文稿后，它会按照原始动画顺序生成每次点击后的累积画面，让讲义或分享用 PDF 保留讲述节奏。
 
