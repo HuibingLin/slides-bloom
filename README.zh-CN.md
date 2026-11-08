@@ -30,7 +30,17 @@
 3. 打开“终端”，运行 `mkdir -p ~/.agents/skills`。回到 Finder，按 **Command + Shift + G**，输入 `~/.agents/skills`，然后将 `slides-bloom-convert` 文件夹粘贴到这里。最终应有 `~/.agents/skills/slides-bloom-convert/SKILL.md` 和 `~/.agents/skills/slides-bloom-convert/scripts/convert.py`，中间不要多一层 `slides-bloom-main`。
 4. 新建 Codex 对话，或重启桌面版，在侧边栏的 **Skills** 确认有 `slides-bloom-convert`。然后按照上面的第 3 步使用 skill 转换 PPTX。
 
-其他操作系统和本地 skill 存放位置请参阅 [OpenAI 官方说明](https://learn.chatgpt.com/docs/build-skills)。
+### 手动下载并安装整个 skill 文件夹（Windows）
+
+以下步骤适用于使用 **Windows 原生 Codex** 的 ChatGPT 桌面版；如果将 Codex 代理切换到 WSL，请改用 WSL 用户主目录下的 `~/.agents/skills`。
+
+1. 打开 [Slides Bloom GitHub 仓库](https://github.com/HuibingLin/slides-bloom)，点击 **Code → Download ZIP**，下载后右键选择 **全部解压缩**。GitHub 会下载整个仓库。
+2. 打开解压后的 `slides-bloom-main` 文件夹，进入 `.agents\skills`，复制**整个** `slides-bloom-convert` 文件夹。确认其中同时有 `SKILL.md` 和 `scripts\convert.py`；只复制 `SKILL.md` 无法转换。
+3. 打开 PowerShell，运行 `New-Item -ItemType Directory -Force "$HOME\.agents\skills"`。按 **Win + R**，输入 `%USERPROFILE%\.agents\skills` 并按 Enter，再将 `slides-bloom-convert` 文件夹粘贴到这里。最终应有 `%USERPROFILE%\.agents\skills\slides-bloom-convert\SKILL.md` 和 `%USERPROFILE%\.agents\skills\slides-bloom-convert\scripts\convert.py`；中间不要多一层 `slides-bloom-main`。
+4. 确认已经安装 Python 3：在 PowerShell 运行 `py -3 --version`。然后新建 Codex 对话，或重启桌面版，在侧边栏的 **Skills** 确认有 `slides-bloom-convert`。
+5. 将 `.pptx` 放在 Codex 可以访问的本地文件夹，然后说：`使用 $slides-bloom-convert 将 C:\Users\你的用户名\Documents\demo.pptx 的点击动画转成 PDF`，并将示例路径替换为演示文稿的实际完整路径。
+
+其他本地 skill 存放位置请参阅 [OpenAI 官方说明](https://learn.chatgpt.com/docs/build-skills)；Windows 原生代理与 WSL 的区别请参阅 [Windows 说明](https://learn.chatgpt.com/docs/app/windows)。
 
 ## 转换结果是什么样子？
 

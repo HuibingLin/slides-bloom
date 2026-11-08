@@ -30,7 +30,17 @@ This is a local Codex skill, not a plugin for regular ChatGPT web chats. You nee
 3. In Terminal, run `mkdir -p ~/.agents/skills`. In Finder, press **Command + Shift + G**, enter `~/.agents/skills`, and paste the copied `slides-bloom-convert` folder there. Its final location should be `~/.agents/skills/slides-bloom-convert/SKILL.md`, with the script at `~/.agents/skills/slides-bloom-convert/scripts/convert.py`. Do not add an extra `slides-bloom-main` folder at this location.
 4. Open a new Codex chat or restart the desktop app, then check **Skills** in the sidebar for `slides-bloom-convert`. Follow step 3 above to convert a PPTX.
 
-For other operating systems or local skill locations, see [OpenAI's skill setup guide](https://learn.chatgpt.com/docs/build-skills).
+### Download and install the entire skill folder manually (Windows)
+
+These steps are for the **Windows-native Codex agent** in the ChatGPT desktop app. If you switched the agent to WSL, use `~/.agents/skills` in your WSL home directory instead.
+
+1. Open the [Slides Bloom GitHub repository](https://github.com/HuibingLin/slides-bloom), select **Code → Download ZIP**, then right-click the download and choose **Extract All**. GitHub downloads the whole repository.
+2. Open the extracted `slides-bloom-main` folder, go to `.agents\skills`, and copy the **entire** `slides-bloom-convert` folder. Check that it contains both `SKILL.md` and `scripts\convert.py`; copying only `SKILL.md` will not work.
+3. Open PowerShell and run `New-Item -ItemType Directory -Force "$HOME\.agents\skills"`. Press **Win + R**, enter `%USERPROFILE%\.agents\skills`, and paste the `slides-bloom-convert` folder there. The final files should be `%USERPROFILE%\.agents\skills\slides-bloom-convert\SKILL.md` and `%USERPROFILE%\.agents\skills\slides-bloom-convert\scripts\convert.py`, without an extra `slides-bloom-main` folder.
+4. Check that Python 3 is installed by running `py -3 --version` in PowerShell. Start a new Codex chat or restart the desktop app, then check **Skills** in the sidebar for `slides-bloom-convert`.
+5. Put your `.pptx` in a local folder Codex can access, then ask: `Use $slides-bloom-convert to turn the click animations in C:\Users\YourName\Documents\demo.pptx into a PDF`. Replace the example with your presentation's full path.
+
+For other local skill locations, see [OpenAI's skill setup guide](https://learn.chatgpt.com/docs/build-skills). For Windows-native versus WSL agents, see the [Windows guide](https://learn.chatgpt.com/docs/app/windows).
 
 ## What does the PDF contain?
 
