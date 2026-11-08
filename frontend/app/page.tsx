@@ -3,7 +3,7 @@ import Home from "./home";
 import { siteUrl } from "./site";
 
 const title = "PPT Animation to PDF Converter | Slides Bloom";
-const description = "Convert PowerPoint (.pptx) click animations into step-by-step PDF pages. Preview and download your PDF for free, with no account required. Files up to 20 MB.";
+const description = "Free PPT animation to PDF converter. Turn PowerPoint click animations into cumulative PDF pages, preview every step, and download the result. PPTX files up to 20 MB.";
 
 export const metadata: Metadata = {
   title,
@@ -25,20 +25,32 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
 };
 
-const appSchema = JSON.stringify({
+const siteSchema = JSON.stringify({
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  name: "Slides Bloom",
-  url: `${siteUrl}/`,
-  description,
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Any",
-  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "Slides Bloom",
+      alternateName: "SlidesBloom",
+      url: `${siteUrl}/`,
+    },
+    {
+      "@type": "WebApplication",
+      name: "Slides Bloom",
+      url: `${siteUrl}/`,
+      description,
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Any",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    },
+  ],
 }).replace(/</g, "\\u003c");
 
 export default function Page() {
   return <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: appSchema }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: siteSchema }} />
     <Home />
   </>;
 }

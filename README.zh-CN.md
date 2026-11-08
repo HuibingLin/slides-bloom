@@ -8,6 +8,8 @@
 
 [打开 Slides Bloom 在线版](https://slidesbloom.duckdns.org/)
 
+[图解教程：将 PPT 点击动画逐页转成 PDF](https://slidesbloom.duckdns.org/zh-cn/ppt-animation-to-pdf)
+
 在浏览器输入上方地址，或点击链接，即可上传 PowerPoint（`.pptx`）、将点击动画转换为逐页 PDF、预览并下载结果。网站免费使用，无需安装软件或注册账号。
 
 **将 PPTX 的点击动画展开为可以逐页阅读的 PDF。** Slides Bloom 是免费、开源、可自行部署的工具。上传演示文稿后，它会按照原始动画顺序生成每次点击后的累积画面，让讲义或分享用 PDF 保留讲述节奏。
@@ -44,6 +46,8 @@
 ```
 
 没有支持动画的静态幻灯片仍输出一页。同一次点击中同步或接续发生的进入效果会合并为同一 PDF 页。展开后的页面保持原始幻灯片顺序。
+
+可以下载[一张幻灯片的动画 PPTX](frontend/public/examples/animation-steps-demo.pptx) 和[实际转换的四页 PDF](frontend/public/examples/animation-steps-demo.pdf) 对照查看。[在线教程](https://slidesbloom.duckdns.org/zh-cn/ppt-animation-to-pdf) 展示了四页画面。示例使用简单的英文文字进入动画；转换其他效果或字体时，请检查预览。
 
 ## 主要功能
 
@@ -149,6 +153,10 @@ PYTHONPATH=backend backend/.venv/bin/python -m unittest discover -s backend/test
 如果使用自己的公网域名，请在构建前于 `.env` 设置 `SITE_URL=https://your-domain.example`。该网址会写入前端的规范网址、站点地图和分享信息；修改后运行 `docker compose up --build -d frontend` 重新构建，再运行 `docker compose restart nginx`，使网关找到新容器。使用 `compose.oracle.yaml` 时，`SITE_DOMAIN` 应与之对应。公网部署不要将 `SITE_URL` 设为 `localhost`。
 
 确认 HTTPS 网站可以公开访问后，将域名加入 [Google Search Console](https://search.google.com/search-console/about)。如选择 HTML 标签验证，将标签里的 `content` 值填入 `.env` 的 `GOOGLE_SITE_VERIFICATION`，重新构建前端并点击“验证”。然后提交 `https://your-domain.example/sitemap.xml`。站点地图可以帮助发现网页，但不能保证立即收录或获得排名。
+
+如果选择 HTML 文件验证，把 Google 提供的文件原样放在 `frontend/public/`，重新构建并部署前端。确认 `https://your-domain.example/<文件名>.html` 可以返回 Google 指定的完整内容，再点击“验证”。验证后仍需保留该文件。
+
+如果搜索不到，请在 Search Console 的**网址检查**中输入首页完整网址，查看索引状态、具体原因和 Google 选择的规范网址。用**测试实际网址**检查当前部署；若符合条件，再请求编入索引。搜索“PPT Animation to PDF”这类宽泛词同时受排名影响，无法单独证明是否收录。首页已提供可见的功能说明、转换步骤和常见问题。
 
 ## 许可证
 

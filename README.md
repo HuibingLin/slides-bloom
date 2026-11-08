@@ -8,6 +8,8 @@
 
 [Open Slides Bloom online](https://slidesbloom.duckdns.org/)
 
+[Illustrated guide: PPT animation to PDF, click by click](https://slidesbloom.duckdns.org/ppt-animation-to-pdf)
+
 Enter the address above in your browser or use the link to upload a PowerPoint (`.pptx`), convert its click animations into PDF pages, preview the result, and download the PDF. The public site is free to use and requires no installation or account.
 
 **Turn PowerPoint click animations into PDF pages you can read one step at a time.** Slides Bloom is a free, open-source tool you can run on your own server. It expands supported entrance animations in their original click order, keeping previously revealed content on each new PDF page.
@@ -44,6 +46,8 @@ Page 4  Starting slide + items 1, 2 and 3
 ```
 
 A static slide produces one page. Entrance effects that occur together or immediately after one another during the same click are combined on one PDF page. Original slide order is preserved.
+
+Try a real conversion: download the [one-slide animated PPTX](frontend/public/examples/animation-steps-demo.pptx) and its [four-page PDF](frontend/public/examples/animation-steps-demo.pdf). The [online guide](https://slidesbloom.duckdns.org/ppt-animation-to-pdf) shows all four rendered pages. This example uses simple text entrances; check the preview when converting other effects or fonts.
 
 ## Features
 
@@ -149,6 +153,10 @@ The public homepage includes a descriptive title, summary, social sharing image,
 For a custom public domain, set `SITE_URL=https://your-domain.example` in `.env` before building. This value is baked into the frontend's canonical URL, sitemap, and social metadata. After changing it, run `docker compose up --build -d frontend` and then `docker compose restart nginx` so the proxy discovers the rebuilt container. Keep `SITE_DOMAIN` set to the same host when using `compose.oracle.yaml`. Do not set `SITE_URL` to `localhost` for a public deployment.
 
 Once the HTTPS site is reachable without a login, add the domain to [Google Search Console](https://search.google.com/search-console/about). For HTML-tag verification, put the tag's `content` value in `GOOGLE_SITE_VERIFICATION` in `.env`, rebuild the frontend, and click Verify. Then submit `https://your-domain.example/sitemap.xml`. Search engines decide when and whether to index a page; a sitemap does not guarantee a ranking or immediate appearance.
+
+For HTML-file verification instead, place the exact file supplied by Google in `frontend/public/`, rebuild and deploy the frontend, and confirm `https://your-domain.example/<filename>.html` returns Google's exact text before clicking Verify. Keep the file online so ownership remains verifiable.
+
+To diagnose a missing result, inspect the exact homepage URL in Search Console's **URL Inspection** tool. Check its indexing reason and selected canonical URL; use **Test live URL** to check the current deployment, then request indexing if appropriate. A broad search such as “PPT Animation to PDF” tests ranking as well as indexing, so it cannot show whether the page is indexed by itself. The homepage includes a visible description, conversion steps, and common questions for readers and crawlers.
 
 ## License
 

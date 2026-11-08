@@ -21,7 +21,11 @@ services:
     restart: unless-stopped
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      args:
+        SITE_URL: ${SITE_URL:-https://slidesbloom.duckdns.org}
+        GOOGLE_SITE_VERIFICATION: ${GOOGLE_SITE_VERIFICATION:-}
     networks:
       - public
     restart: unless-stopped

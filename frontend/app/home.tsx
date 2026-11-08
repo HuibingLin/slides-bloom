@@ -2,6 +2,7 @@
 
 import { ChangeEvent, DragEvent, useEffect, useRef, useState } from "react";
 import { isMessageKey, languageNames, locales, Locale, MessageKey, translate } from "./i18n";
+import { authorName, authorUrl, repositoryUrl } from "./site";
 
 const API = process.env.NEXT_PUBLIC_API_BASE ?? "";
 const MAX_SIZE = 20 * 1024 * 1024;
@@ -237,7 +238,7 @@ export default function Home() {
     <main className="main-grid">
       <section className="workspace" aria-labelledby="headline">
         <div className="eyebrow"><span className="eyebrow-line"/> {t("eyebrow")}</div>
-        <h1 id="headline">{t("headlineFirst")}<br/><em>{t("headlineSecond")}</em></h1>
+        <h1 id="headline">{t("headlineFirst")}{" "}<br/><em>{t("headlineSecond")}</em></h1>
         <p className="lead">{t("lead")}</p>
         <div className="upload-panel">
           <div className="panel-heading"><span>{t("uploadHeading")}</span><span className="panel-step">01 / 02</span></div>
@@ -296,7 +297,34 @@ export default function Home() {
         <article><h3>{t("seoFormulaTitle")}</h3><p>{t("seoFormulaBody")}</p></article>
         <article><h3>{t("seoFileTitle")}</h3><p>{t("seoFileBody")}</p></article>
       </div>
+      <div className="guide">
+        <section aria-labelledby="guide-heading">
+          <h2 id="guide-heading">{t("guideHeading")}</h2>
+          <p>{t("guideIntro")}</p>
+          <ol className="guide-steps">
+            <li><h3>{t("guideUploadTitle")}</h3><p>{t("guideUploadBody")}</p></li>
+            <li><h3>{t("guideExpandTitle")}</h3><p>{t("guideExpandBody")}</p></li>
+            <li><h3>{t("guideReviewTitle")}</h3><p>{t("guideReviewBody")}</p></li>
+          </ol>
+          <a className="guide-link" href={locale === "en" ? "/ppt-animation-to-pdf" : `/${locale.toLowerCase()}/ppt-animation-to-pdf`}>{t("guideMore")} <span aria-hidden="true">→</span></a>
+        </section>
+        <section aria-labelledby="questions-heading">
+          <h2 id="questions-heading">{t("questionsHeading")}</h2>
+          <div className="questions">
+            <div><h3>{t("questionStaticTitle")}</h3><p>{t("questionStaticBody")}</p></div>
+            <div><h3>{t("questionFirstTitle")}</h3><p>{t("questionFirstBody")}</p></div>
+            <div><h3>{t("questionFidelityTitle")}</h3><p>{t("questionFidelityBody")}</p></div>
+          </div>
+        </section>
+      </div>
     </section>
-    <footer className="footer"><span>Slides Bloom <span className="footer-sep">/</span> {t("footerName")}</span><span>{t("footerDetail")}</span></footer>
+    <footer className="footer">
+      <div className="footer-links">
+        <span>Slides Bloom <span className="footer-sep">/</span> {t("footerName")}</span>
+        <span>{t("footerAuthor")} <a href={authorUrl} target="_blank" rel="noopener noreferrer">{authorName}</a></span>
+        <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">{t("footerSource")}</a>
+      </div>
+      <span className="footer-detail">{t("footerDetail")}</span>
+    </footer>
   </div>;
 }
