@@ -12,6 +12,17 @@ Enter the address above in your browser or use the link to upload a PowerPoint (
 
 **Turn PowerPoint click animations into PDF pages you can read one step at a time.** Slides Bloom is a free, open-source tool you can run on your own server. It expands supported entrance animations in their original click order, keeping previously revealed content on each new PDF page.
 
+## Install the Codex desktop skill from GitHub
+
+This is a local Codex skill, not a plugin for regular ChatGPT web chats. You need the ChatGPT desktop app with Codex, Python 3, and access to the Slides Bloom website. You do **not** need Docker or a local Slides Bloom server.
+
+1. Open **Codex** in the ChatGPT desktop app and start a chat. Paste: `Use $skill-installer to install https://github.com/HuibingLin/slides-bloom/tree/main/.agents/skills/slides-bloom-convert`.
+2. After installation, start a new Codex chat. If the skill does not appear, restart the app. Check **Skills** in the sidebar for `slides-bloom-convert`.
+3. Open a local project folder in Codex and put your `.pptx` file in that folder. Ask: `Use $slides-bloom-convert to turn my presentation's click animations into a PDF. The file is /absolute/path/to/presentation.pptx`.
+4. Codex runs the bundled Python script and gives you a link to the saved PDF. The script uploads the PPTX to `https://slidesbloom.duckdns.org` for conversion; the service accepts files up to 20 MiB. Only use it for files you are willing to send to that service.
+
+The [skill source and bundled script](.agents/skills/slides-bloom-convert/) are also available for manual installation. See [OpenAI's skill setup guide](https://learn.chatgpt.com/docs/build-skills) for local skill locations and troubleshooting.
+
 ## What does the PDF contain?
 
 For one slide with three successive entrances, the PDF contains four pages:

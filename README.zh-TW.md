@@ -12,6 +12,17 @@
 
 **將 PPTX 的點擊動畫展開為可逐頁閱讀的 PDF。** Slides Bloom 是免費、開源、可自行部署的工具。上傳簡報後，它會依原始動畫順序產生每次點擊後的累積畫面，讓講義或分享用 PDF 保留講述節奏。
 
+## 從 GitHub 安裝到 Codex 桌面版
+
+這是供本機 Codex 使用的 skill，並非一般 ChatGPT 網頁對話可直接安裝的插件。需要 ChatGPT 桌面版中的 Codex、Python 3，以及可連接 Slides Bloom 網站的網路；**不需要**安裝 Docker 或自行架設轉換服務。
+
+1. 在 ChatGPT 桌面版開啟 **Codex**，建立對話並貼上：`Use $skill-installer to install https://github.com/HuibingLin/slides-bloom/tree/main/.agents/skills/slides-bloom-convert`。
+2. 安裝完成後開啟新的 Codex 對話。若沒有看到 skill，重新啟動桌面版；可在側邊欄的 **Skills** 檢查 `slides-bloom-convert`。
+3. 在 Codex 開啟本機專案資料夾，將 `.pptx` 放入該資料夾，然後說：`使用 $slides-bloom-convert 將 /檔案的絕對路徑/簡報.pptx 的點擊動畫轉成 PDF`。
+4. Codex 會執行 skill 內的 Python 腳本，並提供產出 PDF 的連結。腳本會將 PPTX 上傳至 `https://slidesbloom.duckdns.org` 轉換，檔案上限為 20 MiB；請只轉換願意傳送到該服務的檔案。
+
+也可以從 [GitHub 下載整個 skill 資料夾](.agents/skills/slides-bloom-convert/) 手動安裝；本機 skill 的位置與疑難排解請參閱 [OpenAI 官方說明](https://learn.chatgpt.com/docs/build-skills)。
+
 ## 轉換結果是什麼樣子？
 
 假設一張投影片有依序出現的 ①、②、③，輸出的 PDF 會有四頁：
