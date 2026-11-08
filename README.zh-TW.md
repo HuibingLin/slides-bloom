@@ -21,7 +21,14 @@
 3. 在 Codex 開啟本機專案資料夾，將 `.pptx` 放入該資料夾，然後說：`使用 $slides-bloom-convert 將 /檔案的絕對路徑/簡報.pptx 的點擊動畫轉成 PDF`。
 4. Codex 會執行 skill 內的 Python 腳本，並提供產出 PDF 的連結。腳本會將 PPTX 上傳至 `https://slidesbloom.duckdns.org` 轉換，檔案上限為 20 MiB；請只轉換願意傳送到該服務的檔案。
 
-也可以從 [GitHub 下載整個 skill 資料夾](.agents/skills/slides-bloom-convert/) 手動安裝；本機 skill 的位置與疑難排解請參閱 [OpenAI 官方說明](https://learn.chatgpt.com/docs/build-skills)。
+### 從 GitHub ZIP 手動安裝
+
+1. 到 [Slides Bloom 的 GitHub 頁面](https://github.com/HuibingLin/slides-bloom)，點選 **Code → Download ZIP**，再解壓縮。GitHub 的單一資料夾頁面沒有直接下載整個資料夾的按鈕。
+2. 在解壓後的 `slides-bloom-main` 中，找到 `.agents/skills/slides-bloom-convert`。若在 macOS Finder 看不到 `.agents`，按 **Command + Shift + .** 顯示隱藏檔案。
+3. 如有需要，先建立個人的 Codex skills 資料夾，然後把**整個** `slides-bloom-convert` 資料夾複製進去：macOS／Linux 為 `~/.agents/skills/`，Windows 為 `%USERPROFILE%\.agents\skills\`。複製後應同時看到 `slides-bloom-convert/SKILL.md` 和 `slides-bloom-convert/scripts/convert.py`；只複製 `SKILL.md` 無法轉換。
+4. 重新啟動 Codex，在 **Skills** 確認出現 `slides-bloom-convert`，再依照上方第 3–4 步轉換 PPTX。複製完成後，不必保留解壓後的整個專案。
+
+本機 skill 的位置與疑難排解請參閱 [OpenAI 官方說明](https://learn.chatgpt.com/docs/build-skills)。
 
 ## 轉換結果是什麼樣子？
 

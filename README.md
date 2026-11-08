@@ -21,7 +21,14 @@ This is a local Codex skill, not a plugin for regular ChatGPT web chats. You nee
 3. Open a local project folder in Codex and put your `.pptx` file in that folder. Ask: `Use $slides-bloom-convert to turn my presentation's click animations into a PDF. The file is /absolute/path/to/presentation.pptx`.
 4. Codex runs the bundled Python script and gives you a link to the saved PDF. The script uploads the PPTX to `https://slidesbloom.duckdns.org` for conversion; the service accepts files up to 20 MiB. Only use it for files you are willing to send to that service.
 
-The [skill source and bundled script](.agents/skills/slides-bloom-convert/) are also available for manual installation. See [OpenAI's skill setup guide](https://learn.chatgpt.com/docs/build-skills) for local skill locations and troubleshooting.
+### Manual installation from the GitHub ZIP
+
+1. On the [Slides Bloom GitHub page](https://github.com/HuibingLin/slides-bloom), select **Code → Download ZIP**, then extract the ZIP. GitHub's page for one folder does not have a separate folder download button.
+2. In the extracted `slides-bloom-main` folder, find `.agents/skills/slides-bloom-convert`. The `.agents` folder is hidden on some systems; in macOS Finder, press **Command + Shift + .** to show hidden files.
+3. Create your personal Codex skills folder if needed, then copy the **entire** `slides-bloom-convert` folder into it: `~/.agents/skills/` on macOS/Linux, or `%USERPROFILE%\.agents\skills\` on Windows. The result must contain `slides-bloom-convert/SKILL.md` and `slides-bloom-convert/scripts/convert.py`. Copying only `SKILL.md` will not work.
+4. Restart Codex, check **Skills** for `slides-bloom-convert`, then follow steps 3–4 above to convert a PPTX. Once the skill is copied, you do not need to keep the extracted repository.
+
+See [OpenAI's skill setup guide](https://learn.chatgpt.com/docs/build-skills) for local skill locations and troubleshooting.
 
 ## What does the PDF contain?
 
